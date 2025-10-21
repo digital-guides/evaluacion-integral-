@@ -340,7 +340,7 @@ const Index = () => {
   const question = questions[currentQuestion];
   const progress = ((currentQuestion + 1) / questions.length) * 100;
   const isAnswered = showExplanation[question.id];
-  const selectedAnswer = selectedAnswers[question.id];
+  const selectedAnswer = selectedAnswers[question.id] || "";
   const isCorrect = selectedAnswer === question.correct;
 
   return (
