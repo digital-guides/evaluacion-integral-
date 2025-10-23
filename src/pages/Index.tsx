@@ -324,7 +324,7 @@ const Index = () => {
                 de la comunicación organizacional y asertiva antes de ponerlos en práctica.
               </p>
               <p className="text-center text-secondary font-medium">
-                Autora: Mcs. María Auxiliadora Vielma U.
+                Autora: MSc María Auxiliadora Vielma U.
               </p>
             </div>
 
