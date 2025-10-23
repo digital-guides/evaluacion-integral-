@@ -25,9 +25,9 @@ const questions: Question[] = [
     id: 1,
     module: "MÓDULO 1 – COMUNICACIÓN ORGANIZACIONAL",
     moduleNumber: 1,
-    question: "Un cliente plantea una queja directamente al vigilante, quien le promete resolver el problema. El director comercial no estaba al tanto. ¿Qué debe hacerse primero según el proceso de comunicación organizacional?",
+    question: "Un cliente plantea una queja directamente al guardia de seguridad, quien le promete resolver el problema. El director comercial no estaba al tanto. ¿Qué debe hacerse primero según el proceso de comunicación organizacional?",
     options: [
-      { label: "A", text: "Reprender al vigilante por intervenir." },
+      { label: "A", text: "Reprender al guardia de seguridad por intervenir." },
       { label: "B", text: "Aclarar quiénes son los interlocutores internos y externos y quién responde a cada uno." },
       { label: "C", text: "Dejar que todos los colaboradores respondan si tienen buena disposición." },
       { label: "D", text: "Crear un chat general para atender consultas de clientes." }
