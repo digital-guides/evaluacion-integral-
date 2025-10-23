@@ -254,9 +254,6 @@ const Index = () => {
             <CardTitle className="text-3xl font-bold text-primary">
               Evaluación Integral de Comprensión Aplicada
             </CardTitle>
-            <CardDescription className="text-xl font-semibold text-secondary">
-              Comunicación que Conecta
-            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4 text-muted-foreground">
