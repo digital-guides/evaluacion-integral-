@@ -4,11 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, XCircle, BookOpen } from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
+import logo from "@/assets/logo-comunicacion.png";
 
 interface Question {
   id: number;
   module: string;
+  moduleNumber: number;
   question: string;
   options: {
     label: string;
@@ -22,132 +24,142 @@ const questions: Question[] = [
   {
     id: 1,
     module: "MÓDULO 1 – COMUNICACIÓN ORGANIZACIONAL",
-    question: "En tu equipo se han producido malentendidos porque algunos miembros reciben información por distintos canales (mensajes, correo, comentarios informales). ¿Qué deberías hacer como primer paso?",
+    moduleNumber: 1,
+    question: "Un cliente plantea una queja directamente al vigilante, quien le promete resolver el problema. El director comercial no estaba al tanto. ¿Qué debe hacerse primero según el proceso de comunicación organizacional?",
     options: [
-      { label: "A", text: "Pedirle al jefe que decida qué canal usar." },
-      { label: "B", text: "Reunir al grupo y definir un canal único y oficial de comunicación interna." },
-      { label: "C", text: "Esperar que la confusión se resuelva sola." },
-      { label: "D", text: "Corregir los mensajes cuando alguien se equivoque." }
+      { label: "A", text: "Reprender al vigilante por intervenir." },
+      { label: "B", text: "Aclarar quiénes son los interlocutores internos y externos y quién responde a cada uno." },
+      { label: "C", text: "Dejar que todos los colaboradores respondan si tienen buena disposición." },
+      { label: "D", text: "Crear un chat general para atender consultas de clientes." }
     ],
     correct: "B",
-    explanation: "La gestión de canales es clave en la comunicación organizacional. Revisa el módulo 1, apartado sobre \"flujos y canales de comunicación interna\"."
+    explanation: "Identificar actores internos/externos y definir roles de respuesta garantiza coherencia comunicacional. Revisa Clase 1 del módulo 1."
   },
   {
     id: 2,
     module: "MÓDULO 1 – COMUNICACIÓN ORGANIZACIONAL",
-    question: "Un compañero interpreta mal tu mensaje porque usaste un término técnico que él no conoce. Según las 7C de la comunicación, ¿qué principio no cumpliste?",
+    moduleNumber: 1,
+    question: "Durante una reunión interna, usas siglas que solo conoce tu área y el resto del equipo no entiende. ¿En qué elemento del proceso de comunicación se produjo el fallo principal?",
     options: [
-      { label: "A", text: "Concisión." },
-      { label: "B", text: "Claridad." },
-      { label: "C", text: "Coherencia." },
-      { label: "D", text: "Cortesía." }
+      { label: "A", text: "Emisor, por elegir un código no compartido." },
+      { label: "B", text: "Canal, por usar un medio incorrecto." },
+      { label: "C", text: "Contexto, por falta de orden." },
+      { label: "D", text: "Receptor, por no prestar atención." }
     ],
-    correct: "B",
-    explanation: "El principio de claridad implica usar un lenguaje comprensible para el receptor. Revisa las \"7C de la comunicación efectiva\" en el módulo 1, minuto 05:20."
+    correct: "A",
+    explanation: "El emisor debe usar un código compartido para lograr comprensión. Revisa Clase 2 del módulo 1."
   },
   {
     id: 3,
     module: "MÓDULO 1 – COMUNICACIÓN ORGANIZACIONAL",
-    question: "En una presentación ante tu equipo, hablas sin una estructura clara y tus ideas se perciben desordenadas. ¿Qué deberías reforzar?",
+    moduleNumber: 1,
+    question: "En una empresa de servicios, cada área usa su propio lenguaje interno y eso retrasa las tareas conjuntas. ¿Qué acción corresponde al enfoque de comunicación interna?",
     options: [
-      { label: "A", text: "El principio de concreción." },
-      { label: "B", text: "El principio de completitud." },
-      { label: "C", text: "El principio de coherencia." },
-      { label: "D", text: "El principio de corrección." }
+      { label: "A", text: "Exigir que todos se adapten al argot de cada área." },
+      { label: "B", text: "Crear un glosario compartido de términos clave." },
+      { label: "C", text: "Enviar correos masivos con recordatorios." },
+      { label: "D", text: "Establecer reuniones más largas." }
     ],
-    correct: "C",
-    explanation: "La coherencia implica que el mensaje siga un orden lógico. Revisa el ejercicio sobre estructura de mensajes organizacionales."
+    correct: "B",
+    explanation: "La comunicación interna busca cultura compartida y lenguaje común. Revisa Clase 3 del módulo 1."
   },
   {
     id: 4,
     module: "MÓDULO 1 – COMUNICACIÓN ORGANIZACIONAL",
-    question: "Durante una reunión, notas que algunos colaboradores se sienten incómodos porque el líder interrumpe constantemente. ¿Qué podrías proponer para mejorar la situación?",
+    moduleNumber: 1,
+    question: "Un jefe interrumpe constantemente a sus colaboradores, aunque la empresa promueve el valor del respeto. ¿Qué acción es más coherente con los valores organizacionales?",
     options: [
-      { label: "A", text: "Pedir que todos se limiten a hablar una vez." },
-      { label: "B", text: "Guardar silencio para no generar conflicto." },
-      { label: "C", text: "Implementar reglas de comunicación y turnos de palabra." },
-      { label: "D", text: "Hablar con el líder en público para corregirlo." }
+      { label: "A", text: "Evitar las reuniones con él." },
+      { label: "B", text: "Corregirlo en público." },
+      { label: "C", text: "Establecer reglas de interacción alineadas a los valores." },
+      { label: "D", text: "Ignorar la situación para no confrontar." }
     ],
     correct: "C",
-    explanation: "Las reglas de participación fortalecen la comunicación organizacional. Revisa el segmento sobre \"entornos de diálogo abierto\"."
+    explanation: "Los valores deben reflejarse en conductas comunicacionales. Revisa Clase 4 del módulo 1."
   },
   {
     id: 5,
     module: "MÓDULO 1 – COMUNICACIÓN ORGANIZACIONAL",
-    question: "Una persona de tu equipo evita compartir información importante por temor a la reacción de otros. ¿Qué tipo de barrera está afectando la comunicación?",
+    moduleNumber: 1,
+    question: "En un grupo de trabajo, cada jefe usa un canal distinto (WhatsApp, correo, pizarrón) y el personal recibe mensajes contradictorios. ¿Qué debe hacerse según buenas prácticas de flujos y canales?",
     options: [
-      { label: "A", text: "Barrera técnica." },
-      { label: "B", text: "Barrera psicológica." },
-      { label: "C", text: "Barrera semántica." },
-      { label: "D", text: "Barrera temporal." }
+      { label: "A", text: "Unificar criterios y definir canales oficiales por tipo de mensaje." },
+      { label: "B", text: "Usar todos los medios para cubrirse." },
+      { label: "C", text: "Prohibir mensajería instantánea." },
+      { label: "D", text: "Pedir a cada colaborador que revise todos los canales." }
     ],
-    correct: "B",
-    explanation: "Las emociones, miedos o juicios internos son barreras psicológicas. Revisa el punto sobre \"barreras emocionales en el clima laboral\"."
+    correct: "A",
+    explanation: "La organización debe definir y documentar los canales formales. Revisa Clases 6 y 7 del módulo 1."
   },
   {
     id: 6,
     module: "MÓDULO 2 – COMUNICACIÓN EFECTIVA Y ASERTIVA",
-    question: "Recibes una crítica injusta y te sientes irritado. ¿Qué técnica asertiva te permitiría responder de manera respetuosa sin reprimirte?",
+    moduleNumber: 2,
+    question: "En un correo de equipo, un colaborador usa lenguaje técnico que otros no entienden. Según las 7C, ¿qué principio está siendo vulnerado?",
     options: [
-      { label: "A", text: "Técnica del espejo." },
-      { label: "B", text: "Lenguaje \"yo\"." },
-      { label: "C", text: "Pausa estratégica o retiro consciente." },
-      { label: "D", text: "Disco rayado." }
+      { label: "A", text: "Claridad." },
+      { label: "B", text: "Corrección." },
+      { label: "C", text: "Cortesía." },
+      { label: "D", text: "Coherencia." }
     ],
-    correct: "B",
-    explanation: "El \"lenguaje yo\" permite expresar emociones sin culpar. Revisa el módulo 2, apartado \"Lenguaje Yo y comunicación emocional\"."
+    correct: "A",
+    explanation: "El principio de claridad implica usar palabras comprensibles para todos. Revisa Clase 1 del módulo 2."
   },
   {
     id: 7,
     module: "MÓDULO 2 – COMUNICACIÓN EFECTIVA Y ASERTIVA",
-    question: "Un compañero insiste repetidamente en que tomes una tarea que no te corresponde. ¿Qué técnica podrías usar para mantener tu límite sin entrar en conflicto?",
+    moduleNumber: 2,
+    question: "En una reunión, un compañero se muestra agresivo y eleva la voz. ¿Cuál sería la respuesta asertiva más adecuada?",
     options: [
-      { label: "A", text: "Repetir con serenidad tu negativa usando la misma frase clave (técnica del disco rayado)." },
-      { label: "B", text: "Guardar silencio para evitar el conflicto (técnica del silencio empático)." },
-      { label: "C", text: "Decir que lo pensarás más tarde para evitar decir que no (técnica de la dilación)." },
-      { label: "D", text: "Responder con una frase positiva para suavizar la tensión (técnica del filtro positivo)." }
+      { label: "A", text: "Responderle con el mismo tono para que entienda tu punto." },
+      { label: "B", text: "Retirarte de inmediato sin decir nada." },
+      { label: "C", text: "Esperar una pausa y expresar tu posición con calma y respeto." },
+      { label: "D", text: "Hacerle ver en público que está fuera de control." }
     ],
-    correct: "A",
-    explanation: "El disco rayado consiste en repetir con calma tu mensaje sin ceder ni confrontar. Revisa la clase 2, minuto 16:45."
+    correct: "C",
+    explanation: "La asertividad implica expresar sin agredir ni someterse. Revisa Clase 2 del módulo 2."
   },
   {
     id: 8,
     module: "MÓDULO 2 – COMUNICACIÓN EFECTIVA Y ASERTIVA",
-    question: "Estás por tener una conversación difícil y sientes tensión. ¿Qué deberías aplicar antes de responder?",
+    moduleNumber: 2,
+    question: "Un colega insiste varias veces en que aceptes una tarea que no te corresponde. ¿Qué técnica asertiva te ayuda a mantener tu límite sin discutir?",
     options: [
-      { label: "A", text: "La técnica del retiro estratégico o pausa consciente." },
-      { label: "B", text: "La técnica del refuerzo positivo." },
-      { label: "C", text: "El lenguaje indirecto." },
-      { label: "D", text: "La crítica constructiva." }
+      { label: "A", text: "Repetir con serenidad tu negativa usando la misma frase (técnica del disco rayado)." },
+      { label: "B", text: "Guardar silencio para evitar conflicto." },
+      { label: "C", text: "Decir que lo pensarás más tarde." },
+      { label: "D", text: "Cambiar de tema." }
     ],
     correct: "A",
-    explanation: "La pausa consciente te permite evitar respuestas impulsivas. Revisa la técnica del \"retiro estratégico\" en el módulo 2."
+    explanation: "El disco rayado mantiene el mensaje firme y tranquilo ante insistencias. Revisa Clase 3 del módulo 2, minuto 16:45."
   },
   {
     id: 9,
     module: "MÓDULO 2 – COMUNICACIÓN EFECTIVA Y ASERTIVA",
-    question: "En una discusión laboral, la otra persona eleva el tono y tú también comienzas a alterarte. ¿Qué principio de la comunicación efectiva estás rompiendo?",
+    moduleNumber: 2,
+    question: "Estás por responder un mensaje que te molesta. ¿Qué técnica deberías aplicar antes de contestar?",
     options: [
-      { label: "A", text: "Cortesía." },
-      { label: "B", text: "Concisión." },
-      { label: "C", text: "Corrección." },
-      { label: "D", text: "Completitud." }
+      { label: "A", text: "Pausa consciente o retiro estratégico." },
+      { label: "B", text: "Lenguaje \"yo\"." },
+      { label: "C", text: "Disco rayado." },
+      { label: "D", text: "Refuerzo positivo." }
     ],
     correct: "A",
-    explanation: "La cortesía implica respeto y control emocional incluso en desacuerdos. Revisa la infografía de las \"7C\"."
+    explanation: "La pausa o retiro consciente permite responder desde la calma, no desde la emoción. Revisa Clase 3 del módulo 2."
   },
   {
     id: 10,
     module: "MÓDULO 2 – COMUNICACIÓN EFECTIVA Y ASERTIVA",
-    question: "Al expresar una idea, notas que el otro no comprende bien lo que quisiste decir. ¿Qué podrías hacer según los principios de la escucha activa?",
+    moduleNumber: 2,
+    question: "Un compañero te acusa injustamente de no entregar una tarea. ¿Qué técnica permite defenderte sin agredir?",
     options: [
-      { label: "A", text: "Repetir lo mismo más fuerte." },
-      { label: "B", text: "Preguntar qué parte no entendió." },
-      { label: "C", text: "Parafrasear y confirmar la comprensión del otro." },
-      { label: "D", text: "Terminar la conversación." }
+      { label: "A", text: "Lenguaje \"yo\": expresar cómo te afecta la situación sin culpar." },
+      { label: "B", text: "Contraatacar con argumentos." },
+      { label: "C", text: "Guardar silencio para no discutir." },
+      { label: "D", text: "Ironizar la situación." }
     ],
-    correct: "C",
-    explanation: "Parafrasear confirma entendimiento mutuo. Revisa el módulo 2, sección sobre \"escucha activa y retroalimentación empática\"."
+    correct: "A",
+    explanation: "El lenguaje \"yo\" comunica sentimientos sin juicio ni ataque. Revisa Clase 3 del módulo 2."
   }
 ];
 
@@ -187,6 +199,23 @@ const Index = () => {
     return correct * 10;
   };
 
+  const getFailedModules = () => {
+    const module1Fails: number[] = [];
+    const module2Fails: number[] = [];
+    
+    questions.forEach(q => {
+      if (selectedAnswers[q.id] !== q.correct) {
+        if (q.moduleNumber === 1) {
+          module1Fails.push(q.id);
+        } else {
+          module2Fails.push(q.id);
+        }
+      }
+    });
+    
+    return { module1Fails, module2Fails };
+  };
+
   const getPerformanceLevel = (score: number) => {
     if (score >= 80) {
       return {
@@ -196,12 +225,12 @@ const Index = () => {
     } else if (score >= 50) {
       return {
         level: "Comprensión intermedia",
-        description: "Demuestras buena comprensión general, pero conviene repasar técnicas específicas como el disco rayado o la pausa consciente."
+        description: "Demuestras buena comprensión general, pero conviene repasar técnicas específicas."
       };
     } else {
       return {
         level: "Revisión recomendada",
-        description: "Revisa nuevamente los módulos, especialmente los conceptos de las 7C y las técnicas asertivas básicas."
+        description: "Revisa nuevamente los módulos para reforzar los conceptos fundamentales."
       };
     }
   };
@@ -217,37 +246,41 @@ const Index = () => {
   if (!quizStarted) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <Card className="max-w-2xl w-full">
-          <CardHeader className="space-y-4 text-center">
-            <div className="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-              <BookOpen className="w-8 h-8 text-primary-foreground" />
+        <Card className="max-w-3xl w-full">
+          <CardHeader className="space-y-6 text-center">
+            <div className="mx-auto">
+              <img src={logo} alt="Comunicación que Conecta" className="w-full max-w-md mx-auto" />
             </div>
             <CardTitle className="text-3xl font-bold text-primary">
-              Evaluación de Comprensión Aplicada
+              Evaluación Integral de Comprensión Aplicada
             </CardTitle>
-            <CardDescription className="text-2xl font-semibold text-secondary">
+            <CardDescription className="text-xl font-semibold text-secondary">
               Comunicación que Conecta
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Evalúa cuánto has comprendido de los dos módulos del programa "Comunicación que Conecta".
+                Esta evaluación integral mide tu comprensión práctica de los dos módulos del programa "Comunicación que Conecta":
               </p>
+              <ol className="list-decimal list-inside space-y-2 ml-4">
+                <li>Comunicación Organizacional</li>
+                <li>Comunicación Efectiva y Asertiva</li>
+              </ol>
               <p>
-                Cada pregunta plantea una situación práctica en la que deberás identificar la acción o respuesta más adecuada según los conceptos aprendidos.
+                Cada pregunta describe una situación laboral real. Elige la opción que mejor refleje los principios vistos en clase.
               </p>
-              <p>
-                No se evalúa tu experiencia personal, sino tu comprensión de las técnicas y principios vistos en clase.
+              <p className="font-medium text-foreground">
+                No se evalúa memoria, sino tu capacidad para aplicar lo aprendido a contextos reales.
               </p>
             </div>
             
-            <div className="bg-muted p-4 rounded-lg space-y-2">
-              <h3 className="font-semibold text-primary">Escala de calificación:</h3>
-              <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>• Cada pregunta vale 10 puntos</li>
-                <li>• Resultado final sobre 100 puntos</li>
-                <li>• 10 preguntas en total (5 por módulo)</li>
+            <div className="bg-muted p-6 rounded-lg space-y-3">
+              <h3 className="font-semibold text-primary text-lg">Regla de calificación:</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>10 preguntas. Cada respuesta correcta vale 10 puntos.</li>
+                <li>Resultado final sobre 100 puntos.</li>
+                <li>El sistema mostrará feedback automático por tema para reforzar el aprendizaje.</li>
               </ul>
             </div>
 
@@ -267,10 +300,11 @@ const Index = () => {
   if (quizCompleted) {
     const score = calculateScore();
     const performance = getPerformanceLevel(score);
+    const { module1Fails, module2Fails } = getFailedModules();
     
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <Card className="max-w-2xl w-full">
+        <Card className="max-w-3xl w-full">
           <CardHeader className="text-center space-y-4">
             <div className="mx-auto w-20 h-20 bg-primary rounded-full flex items-center justify-center">
               <CheckCircle2 className="w-10 h-10 text-primary-foreground" />
@@ -296,7 +330,35 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="space-y-3 pt-4">
+            {(module1Fails.length > 0 || module2Fails.length > 0) && (
+              <div className="bg-muted p-6 rounded-lg space-y-4">
+                <h3 className="text-lg font-semibold text-primary">
+                  Recomendaciones automáticas:
+                </h3>
+                {module1Fails.length > 0 && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-foreground font-medium">
+                      Módulo 1 - Comunicación Organizacional:
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Revisa el módulo 1, especialmente los conceptos de proceso, roles, valores y canales de comunicación.
+                    </p>
+                  </div>
+                )}
+                {module2Fails.length > 0 && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-foreground font-medium">
+                      Módulo 2 - Comunicación Efectiva y Asertiva:
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Revisa el módulo 2, especialmente los principios de comunicación efectiva, estilos comunicacionales y técnicas asertivas.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="space-y-3">
               <h4 className="font-semibold text-primary">Resumen de respuestas:</h4>
               <div className="space-y-2">
                 {questions.map((q, idx) => {
@@ -319,9 +381,8 @@ const Index = () => {
 
             <div className="pt-6 border-t space-y-4">
               <p className="text-center text-muted-foreground text-sm">
-                Gracias por completar tu Evaluación de Comprensión Aplicada.
-                El propósito de esta herramienta es ayudarte a reforzar los aspectos clave 
-                de la comunicación organizacional y asertiva antes de ponerlos en práctica.
+                Gracias por completar la Evaluación Integral de Comprensión Aplicada del programa "Comunicación que Conecta".
+                Este instrumento te ayuda a identificar qué conceptos necesitas revisar antes de aplicar las técnicas en entornos reales.
               </p>
               <p className="text-center text-secondary font-medium">
                 Autora: MSc María Auxiliadora Vielma U.
@@ -356,10 +417,10 @@ const Index = () => {
 
         <Card>
           <CardHeader>
-            <CardDescription className="text-xs font-semibold text-accent uppercase">
+            <CardDescription className="text-xs font-semibold text-secondary uppercase">
               {question.module}
             </CardDescription>
-            <CardTitle className="text-xl leading-relaxed text-primary">
+            <CardTitle className="text-xl leading-relaxed text-foreground">
               {question.question}
             </CardTitle>
           </CardHeader>
@@ -376,9 +437,9 @@ const Index = () => {
                     className={`flex items-start space-x-3 border rounded-lg p-4 transition-colors ${
                       isAnswered
                         ? option.label === question.correct
-                          ? "border-green-600 bg-green-50"
+                          ? "border-green-600 bg-green-50 dark:bg-green-950"
                           : option.label === selectedAnswer
-                          ? "border-destructive bg-red-50"
+                          ? "border-destructive bg-red-50 dark:bg-red-950"
                           : "border-border"
                         : "border-border hover:border-primary cursor-pointer"
                     }`}
@@ -399,8 +460,8 @@ const Index = () => {
               <div
                 className={`p-4 rounded-lg border ${
                   isCorrect
-                    ? "bg-green-50 border-green-200"
-                    : "bg-red-50 border-red-200"
+                    ? "bg-green-50 border-green-200 dark:bg-green-950 dark:border-green-800"
+                    : "bg-red-50 border-red-200 dark:bg-red-950 dark:border-red-800"
                 }`}
               >
                 <div className="flex items-start gap-3">
