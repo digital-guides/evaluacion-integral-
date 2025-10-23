@@ -102,10 +102,10 @@ const questions: Question[] = [
     module: "MÓDULO 2 – COMUNICACIÓN EFECTIVA Y ASERTIVA",
     question: "Un compañero insiste repetidamente en que tomes una tarea que no te corresponde. ¿Qué técnica podrías usar para mantener tu límite sin entrar en conflicto?",
     options: [
-      { label: "A", text: "Técnica del disco rayado." },
-      { label: "B", text: "Técnica del silencio empático." },
-      { label: "C", text: "Técnica de la dilación." },
-      { label: "D", text: "Técnica del filtro positivo." }
+      { label: "A", text: "Repetir con serenidad tu negativa usando la misma frase clave (técnica del disco rayado)." },
+      { label: "B", text: "Guardar silencio para evitar el conflicto (técnica del silencio empático)." },
+      { label: "C", text: "Decir que lo pensarás más tarde para evitar decir que no (técnica de la dilación)." },
+      { label: "D", text: "Responder con una frase positiva para suavizar la tensión (técnica del filtro positivo)." }
     ],
     correct: "A",
     explanation: "El disco rayado consiste en repetir con calma tu mensaje sin ceder ni confrontar. Revisa la clase 2, minuto 16:45."
