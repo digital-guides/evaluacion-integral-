@@ -249,7 +249,7 @@ const Index = () => {
         <Card className="max-w-3xl w-full">
           <CardHeader className="space-y-6 text-center">
             <div className="mx-auto">
-              <img src={logo} alt="Comunicación que Conecta" className="w-full max-w-md mx-auto" />
+              <img src={logo} alt="Comunicación que Conecta" className="w-full max-w-sm mx-auto" />
             </div>
             <CardTitle className="text-3xl font-bold text-primary">
               Evaluación Integral de Comprensión Aplicada
