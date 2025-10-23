@@ -423,6 +423,7 @@ const Index = () => {
           </CardHeader>
           <CardContent className="space-y-6">
             <RadioGroup
+              key={question.id}
               value={selectedAnswer}
               onValueChange={(value) => handleAnswerSelect(question.id, value)}
               disabled={isAnswered}
@@ -430,7 +431,7 @@ const Index = () => {
               <div className="space-y-3">
                 {question.options.map((option) => (
                   <div
-                    key={option.label}
+                    key={`${question.id}-${option.label}`}
                     className={`flex items-start space-x-3 border rounded-lg p-4 transition-colors ${
                       isAnswered
                         ? option.label === question.correct
@@ -441,9 +442,9 @@ const Index = () => {
                         : "border-border hover:border-primary cursor-pointer"
                     }`}
                   >
-                    <RadioGroupItem value={option.label} id={option.label} />
+                    <RadioGroupItem value={option.label} id={`${question.id}-${option.label}`} />
                     <Label
-                      htmlFor={option.label}
+                      htmlFor={`${question.id}-${option.label}`}
                       className="flex-1 cursor-pointer font-normal leading-relaxed"
                     >
                       <span className="font-semibold">{option.label})</span> {option.text}
