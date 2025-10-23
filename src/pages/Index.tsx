@@ -126,9 +126,9 @@ const questions: Question[] = [
     question: "Un colega insiste varias veces en que aceptes una tarea que no te corresponde. ¿Qué técnica asertiva te ayuda a mantener tu límite sin discutir?",
     options: [
       { label: "A", text: "Repetir con serenidad tu negativa usando la misma frase (técnica del disco rayado)." },
-      { label: "B", text: "Guardar silencio para evitar conflicto." },
-      { label: "C", text: "Decir que lo pensarás más tarde." },
-      { label: "D", text: "Cambiar de tema." }
+      { label: "B", text: "Guardar silencio para evitar conflicto (técnica del silencio empático)." },
+      { label: "C", text: "Decir que lo pensarás más tarde (técnica de la dilación)." },
+      { label: "D", text: "Cambiar de tema para desviar la atención (técnica del desvío)." }
     ],
     correct: "A",
     explanation: "El disco rayado mantiene el mensaje firme y tranquilo ante insistencias. Revisa Clase 3 del módulo 2, minuto 16:45."
